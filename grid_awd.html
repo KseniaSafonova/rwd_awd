@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="normalize.css">
+    <title>Document</title>
+    <style>
+        .gridcontainer {
+            display: grid;
+            width: 100%;
+            height: 100vh;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 20% 1fr 1fr 1fr 20%;  
+            color: rgb(12, 12, 12);
+            font-size: 3vh;
+        }
+
+        header {
+            background-color: rgb(175, 172, 171);
+            grid-row: 1/2;
+            grid-column: 1/4;
+            text-align: center;
+        }
+
+        main {
+            background-color: rgb(238, 160, 124);
+            grid-row: 2/5;
+            grid-column: 1/3;
+            display: grid;
+            grid-template-columns: 50% 50%;
+            grid-template-rows: 40% 1fr 1fr;
+            justify-items: center;
+            text-align: center;
+        }
+        
+        .main-1 {
+            background-color: rgb(235, 125, 75);
+            width: 90%;
+            height: 85%;
+            grid-row: 2/3;
+            grid-column: 1/2;  
+        }
+
+        .main-2 {
+            background-color: rgb(235, 125, 75);
+            width: 90%;
+            height: 85%;
+            grid-row: 2/3;
+            grid-column: 2/3;    
+        }
+
+        .main-3 {
+            background-color: rgb(235, 125, 75);
+            width: 95%;
+            height: 85%;
+            grid-row: 3/4;
+            grid-column: 1/3;
+        }
+
+        aside {
+            background-color: rgb(124, 228, 150);
+            grid-row: 2/5;
+            grid-column: 3/4;
+            text-align: center;
+        }
+
+        footer {
+            background-color:rgb(175, 172, 171);
+            grid-row: 5/6;
+            grid-column: 1/4;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            align-items: center;
+        }
+
+        .footer {
+            background-color: rgb(206, 241, 206);
+            width: 90%;
+            height: 70%;
+            justify-self: center;
+            text-align: center;
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            footer {
+                display: none;
+        }
+        main {
+            grid-row: 2/6; 
+        }
+
+        aside {
+            grid-row: 2/6;
+        }
+
+        }
+
+        @media (max-width: 767px) and (min-width: 375px) {
+            footer {
+                display: none;
+        }
+        main {
+            grid-row: 2/4; 
+            grid-column: 1/4;
+        }
+
+        aside {
+            grid-row: 4/6;
+            grid-column: 1/4;
+        }
+        }
+    </style>
+</head>
+<body>
+    <div class="gridcontainer">
+    <header>Шапка страницы</header>
+    <main>Основная часть
+    <div class="main-1">Секция-1</div>
+    <div class="main-2">Секция-2</div>
+    <div class="main-3">Секция-3</div>
+    </main>
+    <aside>Боковая область</aside>
+    <footer>
+    <div class="footer">Секция футера-1</div>
+    <div class="footer">Секция футера-2</div>
+    <div class="footer">Секция футера-3</div>
+    <div class="footer">Секция футера-4</div></footer>
+</div>
+</body>
+</html>
